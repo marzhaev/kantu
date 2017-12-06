@@ -1,0 +1,26 @@
+@keyframes hovering {
+  0% {
+    width: 0;
+    height: 2px;
+    visibility: hidden;
+  }
+
+  50% {
+    width: 10px;
+    height: 2px;
+    visibility: visible;
+  }
+
+  100% {
+    width: 20px;
+    height: 2px;
+    visibility: visible;
+  }
+}
+
+@keyframes showing {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
