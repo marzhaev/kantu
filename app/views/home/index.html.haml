@@ -1,0 +1,147 @@
+%main
+  / START Header Page
+  .page-header
+    .container
+      .row
+        .col-xs-12.col-sm-12.col-md-12.col-lg-12.page-img-wrap
+          .page-img
+            %img{:alt => "Home", :src => "images/home-header.jpg"}/
+        .col-xs-12.col-sm-6.col-md-6.col-lg-6.page-title-wrap
+          =link_to katalogs_path, class: "page-title row" do
+            %span.title-preview Канту представляет
+            %h1 Электрооборудование для офисных и жилых помещений
+            %span.title-link.link{:href => "#"} Изучить каталог
+  / END Header Page
+  / START Category List
+  !!! XML
+  / END Category List
+  / START Inspiration Block
+  .inspiration
+    .container
+      .row
+        .col-xs-12.col-sm-12.col-md-12.col-lg-12.inspiration-wrap
+          %h6.insp-meta
+            %span канту 2017
+            \/ решение для офиса
+          .page-img
+            %img{:alt => "Inspiration", :src => "/images/insp.jpg"}/
+        .col-xs-12.col-sm-5.col-md-5.col-lg-5.insp-title-wrap
+          .insp-title.row
+            %span.title-preview решение любой задачи
+            %h2 Компания Kantu редлагает любое решение для Вашего бизнеса или дома
+            =link_to "вдохновиться", inspirations_path, class: "title-link link"
+  / END Inspiration Block
+  / START Tab Filter
+  .tab-filter
+    .container
+      / Nav tabs
+      .row
+        .col-xs-12.col-sm-12.col-md-12.col-lg-12
+          %ul.nav.nav-tabs{:role => "tablist"}
+            %li.active{:role => "presentation"}
+              %a{"aria-controls" => "favorite", "data-toggle" => "tab", :href => "#favorite", :role => "tab"}
+                %img.tabs-icon{:alt => "Популярные", :src => "icons/tabs11.png"}/
+                Популярные
+            %li{:role => "presentation"}
+              %a{"aria-controls" => "for_home", "data-toggle" => "tab", :href => "#for_home", :role => "tab"}
+                %img.tabs-icon{:alt => "Для Дома", :src => "icons/tabs12.png"}/
+                Для Дома
+            %li{:role => "presentation"}
+              %a{"aria-controls" => "for_office", "data-toggle" => "tab", :href => "#for_office", :role => "tab"}
+                %img.tabs-icon{:alt => "Для Офиса", :src => "icons/tabs13.png"}/
+                Для Офиса
+            %li{:role => "presentation"}
+              %a{"aria-controls" => "accessory", "data-toggle" => "tab", :href => "#accessory", :role => "tab"}
+                %img.tabs-icon{:alt => "Аксессуары", :src => "icons/tabs14.png"}/
+                Акcесcуары
+      / Tab panes
+      .tab-content
+        #favorite.tab-pane.fade.in.active{:role => "tabpanel"}
+          .row
+            .col-xs-6.col-sm-6.col-md-3.col-lg-3
+              .tab-img
+                %img{:alt => "Some Image", :src => "images/tab1.jpg"}/
+            .col-xs-6.col-sm-6.col-md-3.col-lg-3
+              .tab-img
+                %img{:alt => "Some Image", :src => "images/tab2.jpg"}/
+            .col-xs-12.col-sm-12.col-md-6.col-lg-6
+              .tab-img
+                %img{:alt => "Some Image", :src => "images/tab3.jpg"}/
+          .row
+            .col-xs-12.col-sm-12.col-md-6.col-lg-6
+              .tab-img
+                %img{:alt => "Some Image", :src => "images/tab4.jpg"}/
+            .col-xs-6.col-sm-6.col-md-3.col-lg-3
+              .tab-img
+                %img{:alt => "Some Image", :src => "images/tab1.jpg"}/
+            .col-xs-6.col-sm-6.col-md-3.col-lg-3
+              .tab-img
+                %img{:alt => "Some Image", :src => "images/tab2.jpg"}/
+        #for_home.tab-pane.fade{:role => "tabpanel"}
+          .row
+            .col-xs-12.col-sm-12.col-md-6.col-lg-6
+              .tab-img
+                %img{:alt => "Some Image", :src => "images/tab4.jpg"}/
+            .col-xs-6.col-sm-6.col-md-3.col-lg-3
+              .tab-img
+                %img{:alt => "Some Image", :src => "images/tab1.jpg"}/
+            .col-xs-6.col-sm-6.col-md-3.col-lg-3
+              .tab-img
+                %img{:alt => "Some Image", :src => "images/tab2.jpg"}/
+          .row
+            .col-xs-6.col-sm-6.col-md-3.col-lg-3
+              .tab-img
+                %img{:alt => "Some Image", :src => "images/tab1.jpg"}/
+            .col-xs-6.col-sm-6.col-md-3.col-lg-3
+              .tab-img
+                %img{:alt => "Some Image", :src => "images/tab2.jpg"}/
+            .col-xs-12.col-sm-12.col-md-6.col-lg-6
+              .tab-img
+                %img{:alt => "Some Image", :src => "images/tab3.jpg"}/
+        #for_office.tab-pane.fade{:role => "tabpanel"}
+          .row
+            .col-xs-6.col-sm-6.col-md-3.col-lg-3
+              .tab-img
+                %img{:alt => "Some Image", :src => "images/tab1.jpg"}/
+            .col-xs-6.col-sm-6.col-md-3.col-lg-3
+              .tab-img
+                %img{:alt => "Some Image", :src => "images/tab2.jpg"}/
+            .col-xs-12.col-sm-12.col-md-6.col-lg-6
+              .tab-img
+                %img{:alt => "Some Image", :src => "images/tab3.jpg"}/
+          .row
+            .col-xs-12.col-sm-12.col-md-6.col-lg-6
+              .tab-img
+                %img{:alt => "Some Image", :src => "images/tab4.jpg"}/
+            .col-xs-6.col-sm-6.col-md-3.col-lg-3
+              .tab-img
+                %img{:alt => "Some Image", :src => "images/tab1.jpg"}/
+            .col-xs-6.col-sm-6.col-md-3.col-lg-3
+              .tab-img
+                %img{:alt => "Some Image", :src => "images/tab2.jpg"}/
+        #accessory.tab-pane.fade{:role => "tabpanel"}
+          .row
+            .col-xs-12.col-sm-12.col-md-6.col-lg-6
+              .tab-img
+                %img{:alt => "Some Image", :src => "images/tab4.jpg"}/
+            .col-xs-6.col-sm-6.col-md-3.col-lg-3
+              .tab-img
+                %img{:alt => "Some Image", :src => "images/tab1.jpg"}/
+            .col-xs-6.col-sm-6.col-md-3.col-lg-3
+              .tab-img
+                %img{:alt => "Some Image", :src => "images/tab2.jpg"}/
+          .row
+            .col-xs-6.col-sm-6.col-md-3.col-lg-3
+              .tab-img
+                %img{:alt => "Some Image", :src => "images/tab1.jpg"}/
+            .col-xs-6.col-sm-6.col-md-3.col-lg-3
+              .tab-img
+                %img{:alt => "Some Image", :src => "images/tab2.jpg"}/
+            .col-xs-12.col-sm-12.col-md-6.col-lg-6
+              .tab-img
+                %img{:alt => "Some Image", :src => "images/tab3.jpg"}/
+  / END Tab Filter
+  / START Form
+  !!! XML
+  / END Form
+/ END Main container

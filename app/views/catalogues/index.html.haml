@@ -1,0 +1,119 @@
+%main
+  / START Header Page
+  .page-header
+    .container
+      .row
+        .col-xs-12.col-sm-12.col-md-12.col-lg-12.page-img-wrap
+          .page-img.video{:style => "background-image: url('images/video.jpg')"}
+            %a.playbutton{"data-video" => "https://01-lvl3-pdl.vimeocdn.com/01/1917/4/109585712/299389083.mp4?expires=1514470276&token=069943bc5169c6fb21370", :href => "https://vimeo.com/109585712"}
+        .col-xs-12.col-sm-6.col-md-6.col-lg-6.page-title-wrap
+          %a.page-title.row{:href => "#"}
+            %span.title-preview
+              розетки, выключатели, управление комфортом,
+              квартирные щиты
+            %h1 Электрооборудование для жилых помещений
+            %span.title-link.link{:href => "#"} Заказать звонок
+  / END Header Page
+  .container
+    .row
+      .col-xs-12.col-sm-12.col-md-12.col-lg-12.bread-crumbs
+        %a{:href => "#"} каталог
+        = succeed "\u{44d}\u{43b}\u{435}\u{43a}\u{442}\u{440}\u{43e}\u{43e}\u{431}\u{43e}\u{440}\u{443}\u{434}\u{43e}\u{432}\u{430}\u{43d}\u{438}\u{435}" do
+          %span.separator /
+  / START Filter
+  .container
+    .row.series-wrap
+      .col-xs-12.col-sm-12.col-md-12.col-lg-12
+        .filter
+          %button.series-btn
+            %svg#filter-svg{:height => "50", :viewbox => "0 0 50 50", :width => "50", :xmlns => "http://www.w3.org/2000/svg"}
+              %line.a{:x1 => "28", :x2 => "50", :y1 => "11", :y2 => "11"}
+              %line.b{:x2 => "31", :y1 => "25", :y2 => "25"}
+              %line.b{:x2 => "5", :y1 => "39", :y2 => "39"}
+              %line.b{:x1 => "20", :x2 => "33", :y1 => "39", :y2 => "39"}
+              %circle.b{:cx => "20.5", :cy => "10.5", :r => "7.5"}
+              %circle.b{:cx => "37.5", :cy => "24.5", :r => "7.5"}
+              %line.b{:x1 => "45", :x2 => "50", :y1 => "25", :y2 => "25"}
+              %line.a{:x2 => "14", :y1 => "11", :y2 => "11"}
+              %circle.b{:cx => "12.5", :cy => "39.5", :r => "7.5"}
+              %line.b{:x1 => "43", :x2 => "50", :y1 => "39", :y2 => "39"}
+          %ul.nav.filter-items
+            %li
+              %a.filter-btn{:href => "#"} розетки
+            %li
+              %a.filter-btn{:href => "#"} выключатели
+            %li
+              %a.filter-btn{:href => "#"} управление комфортом
+            %li
+              %a.filter-btn{:href => "#"} квартирные щиты
+      .col-xs-12.col-sm-12.col-md-12.col-lg-12
+        .series.row
+          .col-xs-4.col-sm-4.col-md-4.col-lg-4.series-item-wrap
+            .series-item.clearfix{:href => "#"}
+              .item-img
+                %img{:alt => "Product 1", :src => "products/product-item-1.jpg"}/
+              %h2 Выключатели серия Unica
+              %p Cерия Unica Хамелеон – это самая широкая цветовая палитра рамок на рынке электротехники. В коллекции представлено 20 цветов: от нежных пастельных тонов до ярких модернистских.
+              %span.title-link.link посмотреть серию
+          .col-xs-4.col-sm-4.col-md-4.col-lg-4.series-item-wrap
+            .series-item.clearfix{:href => "#"}
+              .item-img
+                %img{:alt => "Product 2", :src => "products/produt-item-2.jpg"}/
+              %h2 Выключатели серия Glossa
+              %p Дизайн серии Glossa разрабатывался французским дизайн-бюро и отражает современные тенденции европейского дизайна: плавные линии, классические формы и универсальность.
+              %span.title-link.link посмотреть серию
+          .col-xs-4.col-sm-4.col-md-4.col-lg-4.series-item-wrap
+            .series-item.clearfix{:href => "#"}
+              .item-img
+                %img{:alt => "Product 3", :src => "products/product-item-3.jpg"}/
+              %h2 Выключатели серия Merten
+              %p
+                Серия Antique представлена изделиями роскошного  дизайна для классического интерьера из высококачественных материалов, таких как дорогая и эксклюзивная  латунь с позолотой 24 карата, а также из пластика с сохранением того же уникального стиля.
+              %span.title-link.link посмотреть серию
+  / END Filter
+  / START Inspiration Block
+  .inspiration
+    .container
+      .row
+        .col-xs-12.col-sm-12.col-md-12.col-lg-12.inspiration-wrap
+          %h6.insp-meta
+            %span канту 2017
+            \/ решение для офиса
+          .page-img
+            %img{:alt => "Inspiration", :src => "images/insp.jpg"}/
+        .col-xs-12.col-sm-5.col-md-5.col-lg-5.insp-title-wrap
+          .insp-title.row
+            %span.title-preview решение любой задачи
+            %h2 Компания Kantu редлагает любое решение для Вашего бизнеса или дома
+            %a.title-link.link{:href => "#"} вдохновиться
+  / END Inspiration Block
+  / START Category List
+  .cat-list
+    .container
+      .row
+        .col-xs-12.col-sm-12.col-md-4.col-lg-4
+          %a.cat-wrap{:href => "#"}
+            .cat-img
+              %img{:alt => "Category 1", :src => "images/cat-1.jpg", :title => "Category 1"}/
+            %h3.cat-name
+              Решения для жилых
+              %br/
+              помещений
+        .col-xs-12.col-sm-12.col-md-4.col-lg-4
+          .row
+            .col-xs-12.col-sm-12.col-md-12.col-lg-12.horizontally
+              %a.cat-wrap{:href => "#"}
+                .cat-img
+                  %img{:alt => "Category 2", :src => "images/cat-2.jpg", :title => "Category 2"}/
+                %h3.cat-name Решения для коммерческих помещений
+            .col-xs-12.col-sm-12.col-md-12.col-lg-12.horizontally
+              %a.cat-wrap{:href => "#"}
+                .cat-img
+                  %img{:alt => "Category 3", :src => "images/cat-3.jpg", :title => "Category 3"}/
+                %h3.cat-name Решения для многоквартирных зданий
+        .col-xs-12.col-sm-12.col-md-4.col-lg-4
+          %a.cat-wrap{:href => "#"}
+            .cat-img
+              %img{:alt => "Category 4", :src => "images/cat-4.jpg", :title => "Category 4"}/
+            %h3.cat-name Аксессуары
+  / END Category List
