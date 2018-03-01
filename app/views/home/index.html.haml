@@ -39,20 +39,20 @@
         .col-xs-12.col-sm-12.col-md-12.col-lg-12
           %ul.nav.nav-tabs{:role => "tablist"}
             %li.active{:role => "presentation"}
-              %a{"aria-controls" => "favorite", "data-toggle" => "tab", :href => "#favorite", :role => "tab"}
-                %img.tabs-icon{:alt => "Популярные", :src => "icons/tabs11.png"}/
+              =link_to katalog_path("популярные"), "aria-controls" => "for_home", :role => "tab" do
+                %img.tabs-icon{:alt => "Популярные", :src => "icons/tabs11.png"}
                 Популярные
-            %li{:role => "presentation"}
-              %a{"aria-controls" => "for_home", "data-toggle" => "tab", :href => "#for_home", :role => "tab"}
-                %img.tabs-icon{:alt => "Для Дома", :src => "icons/tabs12.png"}/
+            %li{role: "presentation"}
+              =link_to katalog_path("для дома"), "aria-controls" => "for_home", :role => "tab" do
+                %img.tabs-icon{:alt => "Для Дома", :src => "icons/tabs12.png"}
                 Для Дома
             %li{:role => "presentation"}
-              %a{"aria-controls" => "for_office", "data-toggle" => "tab", :href => "#for_office", :role => "tab"}
-                %img.tabs-icon{:alt => "Для Офиса", :src => "icons/tabs13.png"}/
+              =link_to katalog_path("для офиса"), "aria-controls" => "for_home", :role => "tab" do
+                %img.tabs-icon{:alt => "Для Офиса", :src => "icons/tabs13.png"}
                 Для Офиса
             %li{:role => "presentation"}
-              %a{"aria-controls" => "accessory", "data-toggle" => "tab", :href => "#accessory", :role => "tab"}
-                %img.tabs-icon{:alt => "Аксессуары", :src => "icons/tabs14.png"}/
+              =link_to katalog_path("аксессуары"), "aria-controls" => "for_home", :role => "tab" do
+                %img.tabs-icon{:alt => "Аксессуары", :src => "icons/tabs14.png"}
                 Акcесcуары
       / Tab panes
       .tab-content

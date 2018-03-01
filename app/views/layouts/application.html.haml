@@ -23,7 +23,15 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     / Favicons
     %link{:href => "apple-touch-icon.png", :rel => "apple-touch-icon"}/
-    %link{:href => "favicon.ico", :rel => "icon"}/
+    %link{:href => "favicon.png", :rel => "icon"}/
+    / Global site tag (gtag.js) - Google Analytics
+    %script{:async => "", :src => "https://www.googletagmanager.com/gtag/js?id=UA-114919234-1"}
+    :javascript
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-114919234-1');
   %body
     %header.header-nav
       %nav.navbar
