@@ -22,9 +22,13 @@ module Kantu
 end
 
 def products_db
-  WwwTexenergo::Application.instance_variable_get(:@mongodb_client)[:products]
+  Kantu::Application.instance_variable_get(:@mongodb_client)[:products]
 end
 
 def product_properties_db
-  WwwTexenergo::Application.instance_variable_get(:@mongodb_client)[:product_meta]
+  Kantu::Application.instance_variable_get(:@mongodb_client)[:product_meta]
+end
+
+def manufacturers_db
+  Kantu::Application.instance_variable_get(:@mongodb_client)[:manufacturers]
 end

@@ -15,7 +15,7 @@
   .container
     .row
       .col-xs-12.col-sm-12.col-md-12.col-lg-12.bread-crumbs
-        %a{:href => "#"} каталог
+        %a{href: katalogs_path} каталог
         %span.separator /
         %a{:href => "#"} электрооборудование для жилых помещений
         = succeed "\u{432}\u{44b}\u{43a}\u{43b}\u{44e}\u{447}\u{430}\u{442}\u{435}\u{43b}\u{438}" do
@@ -88,26 +88,15 @@
               %button#item-1.filter-btn.dropdown-toggle{"aria-expanded" => "true", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
                 %svg#filter-svg{:height => "50", :viewbox => "0 0 50 50", :width => "50", :xmlns => "http://www.w3.org/2000/svg"}
                   %path.a{:d => "M8,35V16.56a1,1,0,0,1,1.73-.68L19,27h1V16.56a1,1,0,0,1,1.73-.68L32,27h1V9a1,1,0,0,1,1-1h8a1,1,0,0,1,1,1V45H8"}
-                schneider electric
+                Производитель
               %ul.dropdown-menu{"aria-labelledby" => "item-1"}
-                %li
-                  %a{:href => "#"}
-                    %svg#close{:height => "12.82", :viewbox => "0 0 12.41 12.82", :width => "12.41", :xmlns => "http://www.w3.org/2000/svg"}
-                      %path.cls-1{:d => "M1398,1103l-9,9", :transform => "translate(-1386.59 -1100.59)"}
-                      %path#Shape_1209_copy.cls-1{:d => "M1389,1102l9,9", "data-name" => "Shape 1209 copy", :transform => "translate(-1386.59 -1100.59)"}
-                    schneider electric
-                %li
-                  %a{:href => "#"}
-                    %svg#close{:height => "12.82", :viewbox => "0 0 12.41 12.82", :width => "12.41", :xmlns => "http://www.w3.org/2000/svg"}
-                      %path.cls-1{:d => "M1398,1103l-9,9", :transform => "translate(-1386.59 -1100.59)"}
-                      %path#Shape_1209_copy.cls-1{:d => "M1389,1102l9,9", "data-name" => "Shape 1209 copy", :transform => "translate(-1386.59 -1100.59)"}
-                    schneider electric
-                %li
-                  %a{:href => "#"}
-                    %svg#close{:height => "12.82", :viewbox => "0 0 12.41 12.82", :width => "12.41", :xmlns => "http://www.w3.org/2000/svg"}
-                      %path.cls-1{:d => "M1398,1103l-9,9", :transform => "translate(-1386.59 -1100.59)"}
-                      %path#Shape_1209_copy.cls-1{:d => "M1389,1102l9,9", "data-name" => "Shape 1209 copy", :transform => "translate(-1386.59 -1100.59)"}
-                    schneider electric
+                -["Omron", "Schneider Electric", "Texenergo"].each do |manufacturer_name|
+                  %li
+                    %a{:href => "?manufacturer=#{manufacturer_name}"}
+                      %svg#close{:height => "12.82", :viewbox => "0 0 12.41 12.82", :width => "12.41", :xmlns => "http://www.w3.org/2000/svg"}
+                        %path.cls-1{:d => "M1398,1103l-9,9", :transform => "translate(-1386.59 -1100.59)"}
+                        %path#Shape_1209_copy.cls-1{:d => "M1389,1102l9,9", "data-name" => "Shape 1209 copy", :transform => "translate(-1386.59 -1100.59)"}
+                      =manufacturer_name
             .dropdown
               %button#item-1.filter-btn.dropdown-toggle{"aria-expanded" => "true", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
                 %svg#filter-svg{:height => "50", :viewbox => "0 0 50 50", :width => "50", :xmlns => "http://www.w3.org/2000/svg"}
@@ -149,75 +138,33 @@
           %button.btn-how.desktop как купить?
       .col-xs-12.col-sm-12.col-md-9.col-lg-9
         .product.row
-          .col-xs-6.col-sm-4.col-md-4.col-lg-4.product-item-wrap
-            .product-item.clearfix{:href => "#"}
-              .item-img
-                %img{:alt => "Product 1", :src => "/products/cat-prod-1.jpg"}/
-              %h2 GSL000431
-              %h5.item-desk-title тип:
-              %span.desc-txt выключатель
-              %h5.item-desk-title производитель:
-              %span.desc-txt schneider electric
-              %h5.item-desk-title серия:
-              %span.desc-txt glossa
-              %h5.item-desk-title номинальный ток:
-              %span.desc-txt 10A
-              %h5.item-desk-title цвет:
-              %span.desc-txt белый
-              %h5.item-desk-title наличие на складе:
-              %span.desc-txt в наличии
-              %a.btn-download
-                Скачать каталог
-                %svg#download{:height => "50", :viewbox => "0 0 50 50", :width => "50", :xmlns => "http://www.w3.org/2000/svg"}
-                  %polyline.a{:points => "42 9 25 27 24 27 6 9"}
-                  %line.a{:x1 => "7", :x2 => "25", :y1 => "37", :y2 => "37"}
-                  %line.a{:x1 => "42", :x2 => "35", :y1 => "37", :y2 => "37"}
-          .col-xs-6.col-sm-4.col-md-4.col-lg-4.product-item-wrap
-            .product-item.clearfix{:href => "#"}
-              .item-img
-                %img{:alt => "Product 2", :src => "/products/cat-prod-2.jpg"}/
-              %h2 GSL000431
-              %h5.item-desk-title тип:
-              %span.desc-txt выключатель
-              %h5.item-desk-title производитель:
-              %span.desc-txt schneider electric
-              %h5.item-desk-title серия:
-              %span.desc-txt glossa
-              %h5.item-desk-title номинальный ток:
-              %span.desc-txt 10A
-              %h5.item-desk-title цвет:
-              %span.desc-txt белый
-              %h5.item-desk-title наличие на складе:
-              %span.desc-txt в наличии
-              %a.btn-download
-                Скачать каталог
-                %svg#download{:height => "50", :viewbox => "0 0 50 50", :width => "50", :xmlns => "http://www.w3.org/2000/svg"}
-                  %polyline.a{:points => "42 9 25 27 24 27 6 9"}
-                  %line.a{:x1 => "7", :x2 => "25", :y1 => "37", :y2 => "37"}
-                  %line.a{:x1 => "42", :x2 => "35", :y1 => "37", :y2 => "37"}
-          .col-xs-6.col-sm-4.col-md-4.col-lg-4.product-item-wrap
-            .product-item.clearfix{:href => "#"}
-              .item-img
-                %img{:alt => "Product 3", :src => "/products/cat-prod-3.jpg"}/
-              %h2 GSL000431
-              %h5.item-desk-title тип:
-              %span.desc-txt выключатель
-              %h5.item-desk-title производитель:
-              %span.desc-txt schneider electric
-              %h5.item-desk-title серия:
-              %span.desc-txt glossa
-              %h5.item-desk-title номинальный ток:
-              %span.desc-txt 10A
-              %h5.item-desk-title цвет:
-              %span.desc-txt белый
-              %h5.item-desk-title наличие на складе:
-              %span.desc-txt в наличии
-              %a.btn-download
-                Скачать каталог
-                %svg#download{:height => "50", :viewbox => "0 0 50 50", :width => "50", :xmlns => "http://www.w3.org/2000/svg"}
-                  %polyline.a{:points => "42 9 25 27 24 27 6 9"}
-                  %line.a{:x1 => "7", :x2 => "25", :y1 => "37", :y2 => "37"}
-                  %line.a{:x1 => "42", :x2 => "35", :y1 => "37", :y2 => "37"}
+          =@properties.first
+          -@products.each do |product|
+            .col-xs-6.col-sm-4.col-md-4.col-lg-4.product-item-wrap
+              .product-item.clearfix{:href => "#"}
+                .item-img
+                  %img{src: "http://cdn.texenergo.com/#{product.image_path}", alt: "#{product.name} #{product.article}", style: "max-height: 128px; max-width: 128px;"}/
+                %h2=product.article.empty? ? "..." : product.article
+                %h5.item-desk-title наименование:
+                %span.desc-txt=product.name
+                %h5.item-desk-title тип:
+                %span.desc-txt Промежуточное реле
+                %h5.item-desk-title производитель:
+                %span.desc-txt=product.manufacturer.name
+                %h5.item-desk-title серия:
+                %span.desc-txt=@properties.find{|p| p[:product_id] == product.id}[:properties][:model]
+                %h5.item-desk-title номинальный ток:
+                %span.desc-txt 10A
+                %h5.item-desk-title цвет:
+                %span.desc-txt белый
+                %h5.item-desk-title наличие на складе:
+                %span.desc-txt=product.is_stock_with_mfk? ? "В наличии" : "Под заказ"
+                %a.btn-download
+                  Скачать каталог
+                  %svg#download{:height => "50", :viewbox => "0 0 50 50", :width => "50", :xmlns => "http://www.w3.org/2000/svg"}
+                    %polyline.a{:points => "42 9 25 27 24 27 6 9"}
+                    %line.a{:x1 => "7", :x2 => "25", :y1 => "37", :y2 => "37"}
+                    %line.a{:x1 => "42", :x2 => "35", :y1 => "37", :y2 => "37"}
         .row
           %a.btn-more
             %svg#load-more{:height => "20", :viewbox => "0 0 50 20", :width => "50", :xmlns => "http://www.w3.org/2000/svg"}
