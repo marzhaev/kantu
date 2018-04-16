@@ -5,11 +5,11 @@
       .row
         .col-xs-12.col-sm-12.col-md-12.col-lg-12.page-img-wrap
           .page-img
-            %img{:alt => "Home", :src => "images/home-header.jpg"}/
+            %img{:alt => "Home", :src => "/images/home-header.jpg"}/
         .col-xs-12.col-sm-6.col-md-6.col-lg-6.page-title-wrap
           =link_to katalogs_path, class: "page-title row" do
             %span.title-preview Канту представляет
-            %h1 Электрооборудование для офисных и жилых помещений
+            %h1 Автоматизация для малых и больших производств
             %span.title-link.link{:href => "#"} Изучить каталог
   / END Header Page
   / START Category List
@@ -22,13 +22,13 @@
         .col-xs-12.col-sm-12.col-md-12.col-lg-12.inspiration-wrap
           %h6.insp-meta
             %span канту 2017
-            \/ решение для офиса
+            \/ решение для промышленности
           .page-img
             %img{:alt => "Inspiration", :src => "/images/insp.jpg"}/
         .col-xs-12.col-sm-5.col-md-5.col-lg-5.insp-title-wrap
           .insp-title.row
             %span.title-preview решение любой задачи
-            %h2 Компания Kantu редлагает любое решение для Вашего бизнеса или дома
+            %h2 Компания Kantu предлагает только современные и сверхэффективные решения
             =link_to "вдохновиться", inspirations_path, class: "title-link link"
   / END Inspiration Block
   / START Tab Filter

@@ -9,16 +9,15 @@
         .col-xs-12.col-sm-6.col-md-6.col-lg-6.page-title-wrap
           %a.page-title.row{:href => "#"}
             %span.title-preview
-              розетки, выключатели, управление комфортом,
-              квартирные щиты
-            %h1 Электрооборудование для жилых помещений
+              датчики, реле, контроллеры, безопасность
+            %h1 Электрооборудование для автоматизации
             %span.title-link.link{:href => "#"} Заказать звонок
   / END Header Page
   .container
     .row
       .col-xs-12.col-sm-12.col-md-12.col-lg-12.bread-crumbs
         %a{:href => "#"} каталог
-        = succeed "\u{44d}\u{43b}\u{435}\u{43a}\u{442}\u{440}\u{43e}\u{43e}\u{431}\u{43e}\u{440}\u{443}\u{434}\u{43e}\u{432}\u{430}\u{43d}\u{438}\u{435}" do
+        = succeed "компоненты" do
           %span.separator /
   / START Filter
   .container
@@ -39,13 +38,13 @@
               %line.b{:x1 => "43", :x2 => "50", :y1 => "39", :y2 => "39"}
           %ul.nav.filter-items
             %li
-              %a.filter-btn{:href => "#"} розетки
+              %a.filter-btn{href: "/каталог/датчики"} датчики
             %li
-              %a.filter-btn{:href => "#"} выключатели
+              %a.filter-btn{href: "/каталог/реле"} реле
             %li
-              %a.filter-btn{:href => "#"} управление комфортом
+              %a.filter-btn{href: "/каталог/"} управление комфортом
             %li
-              %a.filter-btn{:href => "#"} квартирные щиты
+              %a.filter-btn{href: "/каталог/"} квартирные щиты
       .col-xs-12.col-sm-12.col-md-12.col-lg-12
         .series.row
           .col-xs-4.col-sm-4.col-md-4.col-lg-4.series-item-wrap

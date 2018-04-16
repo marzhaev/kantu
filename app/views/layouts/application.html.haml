@@ -23,7 +23,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     / Favicons
     %link{:href => "apple-touch-icon.png", :rel => "apple-touch-icon"}/
-    %link{:href => "favicon.png", :rel => "icon"}/
+    %link{:href => "/favicon.png", :rel => "icon"}/
     / Global site tag (gtag.js) - Google Analytics
     %script{:async => "", :src => "https://www.googletagmanager.com/gtag/js?id=UA-114919234-1"}
     :javascript
@@ -37,7 +37,7 @@
       %nav.navbar
         / Brand and toggle get grouped for better mobile display
         .navbar-header
-          %a.navbar-toggle.collapsed.call-toggle{:href => "tel:8 (911) 590-34-42"}
+          %a.navbar-toggle.collapsed.call-toggle{:href => "tel:#{phone_number}"}
             %svg#share-svg{:height => "50", :viewbox => "0 0 50 50", :width => "50", :xmlns => "http://www.w3.org/2000/svg"}
               %path.a{:d => "M23,44.45l-5.35-1.34A3.83,3.83,0,0,1,15,38.59l1.44-5.43a3.77,3.77,0,0,1,4.49-2.59l3.41,1a22.19,22.19,0,0,0,3.35-13.09l-3.34-.91a3.82,3.82,0,0,1-2.61-4.51l1.38-5.23a3.5,3.5,0,0,1,4.49-2.59L33,6.62c6.86,1.87,4.65,19.58-.66,30.14"}
           =link_to root_path, class: "navbar-brand", title: "Kantu" do
@@ -81,7 +81,7 @@
           .share
             %ul.nav.navbar-nav.navbar-share
               %li
-                %a{:href => "tel: 8 (911) 590-34-42"} 8 (911) 590-34-42
+                %a{:href => "tel: #{phone_number}"}=phone_number
               %li
                 %a{:href => "mailto:admin@kantu.ru"} admin@kantu.ru
             %ul.nav.navbar-nav.navbar-share.social
@@ -106,13 +106,11 @@
             %h2
               Мы предлагаем квалифицированную помощь при подборе
               %br/
-              любого электрооборудования для
-              %br/
-              дома и офиса
+              оборудования автоматизации для производства
           .col-xs-12.col-sm-12.col-md-12.col-lg-12
             %form.call-form{:action => ""}
               %input.input{:placeholder => "Ваше имя", :type => "text"}/
-              %input.input{:placeholder => "8 (911) 458-45-66", :type => "tel"}/
+              %input.input{:placeholder => phone_number, :type => "tel"}/
               %label.check-privacy.hide{:for => "privacy"}
                 %input#privacy.input{:name => "checkbox-privacy", :required => "", :type => "checkbox"}/
                 С условиями
@@ -149,7 +147,7 @@
                     © Все права защищены
                   %ul.nav.footer-share
                     %li
-                      %a{:href => "tel: 8 (911) 590-34-42"} 8 (911) 590-34-42
+                      %a{:href => "tel: #{phone_number}"}=phone_number
                     %li
                       %a{:href => "mailto:admin@kantu.ru"} admin@kantu.ru
             .col-xs-12.col-sm-4.col-md-4.col-lg-4
