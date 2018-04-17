@@ -26,6 +26,7 @@
       .col-xs-12.col-sm-12.col-md-3.col-lg-3
         .filter-product.dropdown
           .filter-items
+            - href_params = params.permit(:voltage, :manufacturer, :flipping).to_hash
             .dropdown
               %button#item-1.filter-btn.dropdown-toggle{"aria-expanded" => "true", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
                 %svg#filter-svg{:height => "50", :viewbox => "0 0 50 50", :width => "50", :xmlns => "http://www.w3.org/2000/svg"}
@@ -39,51 +40,45 @@
                   %line.a{:x2 => "14", :y1 => "11", :y2 => "11"}
                   %circle.b{:cx => "12.5", :cy => "39.5", :r => "7.5"}
                   %line.b{:x1 => "43", :x2 => "50", :y1 => "39", :y2 => "39"}
-                glossa
+                напряжение
               %ul.dropdown-menu{"aria-labelledby" => "item-1"}
                 %li
-                  %a{:href => "#"}
+                  %a{:href => "?#{hash_to_params(href_params.merge(voltage: 220))}"}
                     %svg#close{:height => "12.82", :viewbox => "0 0 12.41 12.82", :width => "12.41", :xmlns => "http://www.w3.org/2000/svg"}
                       %path.cls-1{:d => "M1398,1103l-9,9", :transform => "translate(-1386.59 -1100.59)"}
                       %path#Shape_1209_copy.cls-1{:d => "M1389,1102l9,9", "data-name" => "Shape 1209 copy", :transform => "translate(-1386.59 -1100.59)"}
-                    glossa
+                    220В АС
                 %li
-                  %a{:href => "#"}
+                  %a{:href => "?#{hash_to_params(href_params.merge(voltage: 380))}"}
                     %svg#close{:height => "12.82", :viewbox => "0 0 12.41 12.82", :width => "12.41", :xmlns => "http://www.w3.org/2000/svg"}
                       %path.cls-1{:d => "M1398,1103l-9,9", :transform => "translate(-1386.59 -1100.59)"}
                       %path#Shape_1209_copy.cls-1{:d => "M1389,1102l9,9", "data-name" => "Shape 1209 copy", :transform => "translate(-1386.59 -1100.59)"}
-                    glossa
+                    380В АС
                 %li
-                  %a{:href => "#"}
+                  %a{:href => "?#{hash_to_params(href_params.merge(voltage: 24))}"}
                     %svg#close{:height => "12.82", :viewbox => "0 0 12.41 12.82", :width => "12.41", :xmlns => "http://www.w3.org/2000/svg"}
                       %path.cls-1{:d => "M1398,1103l-9,9", :transform => "translate(-1386.59 -1100.59)"}
                       %path#Shape_1209_copy.cls-1{:d => "M1389,1102l9,9", "data-name" => "Shape 1209 copy", :transform => "translate(-1386.59 -1100.59)"}
-                    glossa
+                    24В АС
             .dropdown
               %button#item-1.filter-btn.dropdown-toggle{"aria-expanded" => "true", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
                 %svg#filter-svg{:height => "50", :viewbox => "0 0 50 50", :width => "50", :xmlns => "http://www.w3.org/2000/svg"}
                   %path.a{:d => "M17,14,1.72,29.28a1,1,0,0,0,0,1.43L20.39,48.86a1,1,0,0,0,1.43,0L45.14,25.54a1,1,0,0,0,0-1.41l-23-23"}
                   %path.a{:d => "M45.54,38.84l2.93,3.52a1.94,1.94,0,0,1,.44,1.58,5,5,0,0,1-9.82,0,1.94,1.94,0,0,1,.44-1.58l2.93-3.52A2,2,0,0,1,45.54,38.84Z"}
-                белый, титан, зол...
+                Кол-во контактов
               %ul.dropdown-menu{"aria-labelledby" => "item-1"}
                 %li
-                  %a{:href => "#"}
+                  %a{:href => "?#{hash_to_params(href_params.merge(flipping: 3))}"}
                     %svg#close{:height => "12.82", :viewbox => "0 0 12.41 12.82", :width => "12.41", :xmlns => "http://www.w3.org/2000/svg"}
                       %path.cls-1{:d => "M1398,1103l-9,9", :transform => "translate(-1386.59 -1100.59)"}
                       %path#Shape_1209_copy.cls-1{:d => "M1389,1102l9,9", "data-name" => "Shape 1209 copy", :transform => "translate(-1386.59 -1100.59)"}
-                    Белый
+                    3 C/O
                 %li
-                  %a{:href => "#"}
+                  %a{:href => "?#{hash_to_params(href_params.merge(flipping: 4))}"}
                     %svg#close{:height => "12.82", :viewbox => "0 0 12.41 12.82", :width => "12.41", :xmlns => "http://www.w3.org/2000/svg"}
                       %path.cls-1{:d => "M1398,1103l-9,9", :transform => "translate(-1386.59 -1100.59)"}
                       %path#Shape_1209_copy.cls-1{:d => "M1389,1102l9,9", "data-name" => "Shape 1209 copy", :transform => "translate(-1386.59 -1100.59)"}
-                    Титан
-                %li
-                  %a{:href => "#"}
-                    %svg#close{:height => "12.82", :viewbox => "0 0 12.41 12.82", :width => "12.41", :xmlns => "http://www.w3.org/2000/svg"}
-                      %path.cls-1{:d => "M1398,1103l-9,9", :transform => "translate(-1386.59 -1100.59)"}
-                      %path#Shape_1209_copy.cls-1{:d => "M1389,1102l9,9", "data-name" => "Shape 1209 copy", :transform => "translate(-1386.59 -1100.59)"}
-                    Золото
+                    4 C/O
             .dropdown
               %button#item-1.filter-btn.dropdown-toggle{"aria-expanded" => "true", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
                 %svg#filter-svg{:height => "50", :viewbox => "0 0 50 50", :width => "50", :xmlns => "http://www.w3.org/2000/svg"}
@@ -92,7 +87,7 @@
               %ul.dropdown-menu{"aria-labelledby" => "item-1"}
                 -["Omron", "Schneider Electric", "Texenergo"].each do |manufacturer_name|
                   %li
-                    %a{:href => "?manufacturer=#{manufacturer_name}"}
+                    %a{:href => "?#{hash_to_params(href_params.merge(manufacturer: manufacturer_name))}"}
                       %svg#close{:height => "12.82", :viewbox => "0 0 12.41 12.82", :width => "12.41", :xmlns => "http://www.w3.org/2000/svg"}
                         %path.cls-1{:d => "M1398,1103l-9,9", :transform => "translate(-1386.59 -1100.59)"}
                         %path#Shape_1209_copy.cls-1{:d => "M1389,1102l9,9", "data-name" => "Shape 1209 copy", :transform => "translate(-1386.59 -1100.59)"}
@@ -146,19 +141,25 @@
                   %img{src: "http://cdn.texenergo.com/#{product.image_path}", alt: "#{product.name} #{product.article}", style: "max-height: 128px; max-width: 128px;"}/
                 %h2=product.article.empty? ? "..." : product.article
                 %h5.item-desk-title наименование:
-                %span.desc-txt=product.name
+                %span.desc-txt
+                  =product.name
                 %h5.item-desk-title тип:
                 %span.desc-txt Промежуточное реле
                 %h5.item-desk-title производитель:
-                %span.desc-txt=product.manufacturer.name
+                %span.desc-txt
+                  =product.manufacturer.name
                 %h5.item-desk-title серия:
-                %span.desc-txt=@properties.find{|p| p[:product_id] == product.id}[:properties][:model]
+                %span.desc-txt
+                  =@properties.find{|p| p[:product_id] == product.id}[:properties][:model]
                 %h5.item-desk-title номинальный ток:
                 %span.desc-txt 10A
-                %h5.item-desk-title цвет:
-                %span.desc-txt белый
+                %h5.item-desk-title напряжение, в:
+                %span.desc-txt
+                  - prop = @properties.find{|p| p[:product_id] == product.id}
+                  =((prop[:properties][:voltage][:min] + prop[:properties][:voltage][:max] ) / 2).to_i
                 %h5.item-desk-title наличие на складе:
-                %span.desc-txt=product.is_stock_with_mfk? ? "В наличии" : "Под заказ"
+                %span.desc-txt
+                  =product.is_stock_with_mfk? ? "В наличии" : "Под заказ"
                 %a.btn-download
                   Скачать каталог
                   %svg#download{:height => "50", :viewbox => "0 0 50 50", :width => "50", :xmlns => "http://www.w3.org/2000/svg"}
