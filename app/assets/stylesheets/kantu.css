@@ -7992,8 +7992,9 @@ h3.cat-name,
       .nav-filter li a:hover,
       .nav-filter li a:focus {
         border: 2px solid #fff;
-        font-weight: 700;
-        background: #fff;
+        font-weight: 400;
+        background: #eee;
+        border: 1px solid #eee;
         -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
     .nav-tabs li.active a,
@@ -8435,7 +8436,8 @@ h5.item-desk-title,
     text-transform: inherit; }
 
 .insp-title {
-  margin-top: -65%; }
+  margin-top: -65%;
+cursor: pointer;}
 
 .inspiration-item {
   display: -webkit-box;
@@ -8693,7 +8695,7 @@ h5.item-desk-title,
     position: relative;
     margin-top: 70px; }
   .navbar {
-    height: 100%; }
+    height: 100%;}
   .navbar-collapse.in {
     left: 0;
     top: 70px; }
@@ -9187,3 +9189,10 @@ h5.item-desk-title,
   .product-item h2 {
     font-size: 22px;
     line-height: 30px; } }
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: white;
+  max-width: 80px;
+}

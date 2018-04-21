@@ -4,7 +4,7 @@
 #
 # ps -e | grep ruby
 # kill pid
-workers Integer(ENV['WEB_CONCURRENCY'] || 1)
+# workers Integer(ENV['WEB_CONCURRENCY'] || 1)
 threads_count = Integer(ENV['MAX_THREADS'] || 1)
 threads threads_count, threads_count
 
