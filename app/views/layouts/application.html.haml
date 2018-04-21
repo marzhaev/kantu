@@ -1,0 +1,206 @@
+!!!
+%html
+  %head
+    %title Kantu
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no", :name => "viewport"}/
+    %meta{:content => "Компания TASOMA", :name => "description"}/
+    %meta{:content => "Soft Group", :name => "author"}/
+    %title Компания Kantu
+    / Latest compiled and minified CSS
+    / <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    / Optional theme
+    %link{:crossorigin => "anonymous", :href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css", :integrity => "sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp", :rel => "stylesheet"}/
+    / Google Fonts
+    %link{:href => "https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto+Slab:400,700", :rel => "stylesheet"}/
+    /[if lt IE 9]
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    / Favicons
+    %link{:href => "apple-touch-icon.png", :rel => "apple-touch-icon"}/
+    %link{:href => "/favicon.png", :rel => "icon"}/
+    / Global site tag (gtag.js) - Google Analytics
+    %script{:async => "", :src => "https://www.googletagmanager.com/gtag/js?id=UA-114919234-1"}
+    :javascript
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-114919234-1');
+  %body
+    %header.header-nav
+      %nav.navbar
+        / Brand and toggle get grouped for better mobile display
+        .navbar-header
+          %a.navbar-toggle.collapsed.call-toggle{:href => "tel:#{phone_number}"}
+            %svg#share-svg{:height => "50", :viewbox => "0 0 50 50", :width => "50", :xmlns => "http://www.w3.org/2000/svg"}
+              %path.a{:d => "M23,44.45l-5.35-1.34A3.83,3.83,0,0,1,15,38.59l1.44-5.43a3.77,3.77,0,0,1,4.49-2.59l3.41,1a22.19,22.19,0,0,0,3.35-13.09l-3.34-.91a3.82,3.82,0,0,1-2.61-4.51l1.38-5.23a3.5,3.5,0,0,1,4.49-2.59L33,6.62c6.86,1.87,4.65,19.58-.66,30.14"}
+          =link_to root_path, class: "navbar-brand", title: "Kantu" do
+            %img.main-logo{:alt => "Kantu", :src => "/logo/logo.png"}
+          %button.navbar-toggle.collapsed.main-toggle{"aria-expanded" => "false", "data-target" => "#kantu-menu-collapse", "data-toggle" => "collapse", :type => "button"}
+            %svg#menu-svg{:height => "50", :viewbox => "0 0 50 50", :width => "50", :xmlns => "http://www.w3.org/2000/svg"}
+              %g
+                %line.a{:x2 => "50", :y1 => "11", :y2 => "11"}
+                %line.b{:x2 => "50", :y1 => "25", :y2 => "25"}
+                %line.b{:x2 => "25", :y1 => "39", :y2 => "39"}
+                %line.b{:x1 => "35", :x2 => "50", :y1 => "39", :y2 => "39"}
+            %svg#menu-icon{:height => "24.625", :viewbox => "0 0 24.625 24.625", :width => "24.625", :xmlns => "http://www.w3.org/2000/svg"}
+              %path.cls-1{:d => "M857.684,549.9L878.9,528.687", :transform => "translate(-856.688 -527.688)"}
+              %path.cls-1{:d => "M859.1,528.685l14.142,14.142", :transform => "translate(-856.688 -527.688)"}
+              %path#Shape_2_copy.cls-1{:d => "M876.777,546.363l3.535,3.535", "data-name" => "Shape 2 copy", :transform => "translate(-856.688 -527.688)"}
+          %button.navbar-toggle.collapsed.share-toggle{"data-target" => "#modalShare", "data-toggle" => "modal", :type => "button"}
+            %svg#share-svg{:height => "50", :viewbox => "0 0 50 50", :width => "50", :xmlns => "http://www.w3.org/2000/svg"}
+              %line.a{:x1 => "14", :x2 => "34", :y1 => "21", :y2 => "11"}
+              %line.a{:x1 => "15", :x2 => "28", :y1 => "29", :y2 => "37"}
+              %circle.a{:cx => "8.5", :cy => "25.5", :r => "7.5"}
+              %circle.a{:cx => "41.5", :cy => "8.5", :r => "7.5"}
+              %circle.a{:cx => "42.5", :cy => "42.5", :r => "7.5"}
+        / Collect the nav links, forms, and other content for toggling
+        #kantu-menu-collapse.collapse.navbar-collapse
+          .main
+            %ul.nav.navbar-nav.navbar-menu
+              %li=link_to "Главная", root_path
+              %li
+                =link_to "Электроборудование", katalogs_path
+                %ul.sub-menu
+                  %li
+                    %a{:href => "#"} Для коммерческих помещений
+                  %li
+                    %a{:href => "#"} Для жилых помещений
+                  %li
+                    %a{:href => "#"} Для многоквартирных зданий
+                  %li
+                    %a{:href => "#"} Аксессуары
+              %li=link_to "Вдохновление", inspirations_path
+              %li=link_to "Немного о нас", about_us_path
+          .share
+            %ul.nav.navbar-nav.navbar-share
+              %li
+                %a{:href => "tel: #{phone_number}"}=phone_number
+              %li
+                %a{:href => "mailto:admin@kantu.ru"} admin@kantu.ru
+            %ul.nav.navbar-nav.navbar-share.social
+              %li
+                %a{:href => "#"}
+                  %i.fa.fa-facebook{"aria-hidden" => "true"}
+              %li
+                %a{:href => "#"}
+                  %i.fa.fa-twitter{"aria-hidden" => "true"}
+              %li
+                %a{:href => "#"}
+                  %i.fa.fa-instagram{"aria-hidden" => "true"}
+        / /.navbar-collapse
+    / START Main container
+    = yield
+    / START Form
+    .page-form
+      .container
+        .row
+          .col-xs-12.col-sm-12.col-md-12.col-lg-12
+            %span.title-preview заказать обратный звонок
+            %h2
+              Мы предлагаем квалифицированную помощь при подборе
+              %br/
+              оборудования автоматизации для производства
+          .col-xs-12.col-sm-12.col-md-12.col-lg-12
+            %form.call-form{:action => ""}
+              %input.input{:placeholder => "Ваше имя", :type => "text"}/
+              %input.input{:placeholder => phone_number, :type => "tel"}/
+              %label.check-privacy.hide{:for => "privacy"}
+                %input#privacy.input{:name => "checkbox-privacy", :required => "", :type => "checkbox"}/
+                С условиями
+                %a{:href => "#"} неразглашения
+                моих персональных данных ознакомлен
+              %button.btn-submit.input{:type => "button"} заказать звонок
+              %label.check-privacy{:for => "privacy"}
+                %input#privacy.input{:name => "checkbox-privacy", :required => "", :type => "checkbox"}/
+                С условиями
+                %a{:href => "#"} неразглашения
+                моих персональных данных ознакомлен
+    / END Form
+    %footer.footer
+      .footer-top
+        .container
+          .row.top-wrap
+            .col-xs-12.col-sm-8.col-md-8.col-lg-8
+              .row.top-wrap-revers
+                .col-xs-12.col-sm-6.col-md-6.col-lg-6
+                  %ul.nav.footer-share.social
+                    %li
+                      %a{:href => "#"}
+                        %i.fa.fa-facebook{"aria-hidden" => "true"}
+                    %li
+                      %a{:href => "#"}
+                        %i.fa.fa-twitter{"aria-hidden" => "true"}
+                    %li
+                      %a{:href => "#"}
+                        %i.fa.fa-instagram{"aria-hidden" => "true"}
+                .col-xs-12.col-sm-6.col-md-6.col-lg-6
+                  %p.copyright
+                    KANTU
+                    =Time.now.year.to_s
+                    © Все права защищены
+                  %ul.nav.footer-share
+                    %li
+                      %a{:href => "tel: #{phone_number}"}=phone_number
+                    %li
+                      %a{:href => "mailto:admin@kantu.ru"} admin@kantu.ru
+            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+              %a.policy-link{:href => "#"} Политика конфиденциальности
+      .footer-bottom
+        .container
+          .row
+            .col-xs-12.col-sm-12.col-md-12.col-lg-12
+              %ul.nav.footer-nav
+                %li
+                  %a{:href => "#moveToTop"} наверх
+                %li=link_to "каталог", katalogs_path
+                %li=link_to "о нас", about_us_path
+                %li
+                  %a{:href => "#"} контакты
+    / Modal
+    #modalShare.modal.fade{"aria-labelledby" => "modalShareLabel", :role => "dialog", :tabindex => "-1"}
+      .modal-dialog{:role => "document"}
+        .modal-content
+          .modal-header
+            %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+              %i.fa.fa-times{"aria-hidden" => "true"}
+            %h4#modalShareLabel.modal-title Share on
+          .modal-body
+            %ul.nav.footer-share.social
+              %li
+                %a{:href => "#"}
+                  %i.fa.fa-facebook{"aria-hidden" => "true"}
+              %li
+                %a{:href => "#"}
+                  %i.fa.fa-twitter{"aria-hidden" => "true"}
+              %li
+                %a{:href => "#"}
+                  %i.fa.fa-instagram{"aria-hidden" => "true"}
+    / Latest compiled and minified JavaScript
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js", :type => "text/javascript"}
+    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js", :type => "text/javascript"}
+    %script{:src => "https://use.fontawesome.com/ae7c834c9a.js", :type => "text/javascript"}
+    %script{:crossorigin => "anonymous", :integrity => "sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa", :src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", :type => "text/javascript"}
+    %script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyDXomF2HKzFc00euZI2Qmc3-PlDjAaM6kY&callback=initMap", :type => "text/javascript"}
+    -if Rails.env.production?
+      / Yandex.Metrika counter
+      :javascript
+        (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter48510377 = new Ya.Metrika({ id:48510377, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");
+      %noscript
+        %div
+          %img{:alt => "", :src => "https://mc.yandex.ru/watch/48510377", :style => "position:absolute; left:-9999px;"}/
+      / /Yandex.Metrika counter
+      / Global site tag (gtag.js) - Google Analytics
+      %script{:async => "", :src => "https://www.googletagmanager.com/gtag/js?id=UA-114919234-1"}
+      :javascript
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-114919234-1');

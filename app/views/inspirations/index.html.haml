@@ -1,0 +1,72 @@
+%main
+  / START Header Page
+  .page-header.center
+    .container
+      .row
+        .col-xs-12.col-sm-12.col-md-12.col-lg-12.page-img-wrap
+          .page-img.video{:style => "background-image: url('/images/video.jpg')"}
+            %a.playbutton{"data-video" => "https://01-lvl3-pdl.vimeocdn.com/01/1917/4/109585712/299389083.mp4?expires=1514470276&token=069943bc5169c6fb21370", :href => "https://vimeo.com/109585712"}
+        .col-xs-12.col-sm-6.col-md-6.col-lg-6.page-title-wrap
+          %a.page-title.row{:href => "#"}
+            %span.title-preview для помогите своим идеям реализоваться помещений
+            %h1 Выбeрите наиболее подходящий для Вас вариант и сообщите нам
+            %span.title-link.link{:href => "#"} Заказать звонок
+  / END Header Page
+  .container
+    .row
+      .col-xs-12.col-sm-12.col-md-12.col-lg-12.bread-crumbs
+        %a{:href => "#"} главная
+        = succeed "\u{43f}\u{43e}\u{438}\u{441}\u{43a}" do
+          %span.separator /
+  .container
+    .row.inspiration-page
+      .col-xs-12.col-sm-3.col-md-3.col-lg-3
+        %ul.nav.nav-filter
+          %li.active{:role => "presentation"}
+            %a{:href => "#"}
+              %img.tabs-icon{:alt => "Популярные", :src => "/icons/tabs11.png"}/
+              Популярные
+          %li{:role => "presentation"}
+            %a{:href => "#"}
+              %img.tabs-icon{:alt => "Для Дома", :src => "/icons/tabs12.png"}/
+              Для Дома
+          %li{:role => "presentation"}
+            %a{:href => "#"}
+              %img.tabs-icon{:alt => "Для Офиса", :src => "/icons/tabs13.png"}/
+              Для Офиса
+          %li{:role => "presentation"}
+            %a{:href => "#"}
+              %img.tabs-icon{:alt => "Аксессуары", :src => "/icons/tabs14.png"}/
+              Акcесcуары
+      .col-xs-12.col-sm-9.col-md-9.col-lg-9
+        .row.insp-row
+          .col-xs-9.col-sm-9.col-md-8.col-lg-8
+            .insp-thumb-wrap
+              %img{:alt => "Image 1", :src => "/images/tab3.jpg", :title => "Image 1"}/
+        .row.insp-row.text
+          .col-xs-12.col-sm-12.col-md-4.col-lg-4.insp-title-wrap
+            .insp-title.row
+              %span.title-preview кабельные системы
+              %h2 Компания Kantu предлагает кабельные системы в разных ценовых диапазонах
+              %a.title-link.link{:href => "#"} посмотреть
+          .col-xs-9.col-sm-9.col-md-8.col-lg-8
+            .insp-thumb-wrap
+              %img{:alt => "Image 1", :src => "/images/tab4.jpg", :title => "Image 1"}/
+        .row.insp-row
+          .col-xs-9.col-sm-9.col-md-8.col-lg-8
+            .insp-thumb-wrap
+              %img{:alt => "Image 1", :src => "/images/tab1.jpg", :title => "Image 1"}/
+        .row.insp-row.right
+          .col-xs-9.col-sm-9.col-md-8.col-lg-8
+            .insp-thumb-wrap
+              %img{:alt => "Image 1", :src => "/images/tab2.jpg", :title => "Image 1"}/
+        .row.insp-row.right.text
+          .col-xs-12.col-sm-12.col-md-4.col-lg-4.insp-title-wrap
+            .insp-title.row
+              %span.title-preview кабельные системы
+              %h2 Компания Kantu предлагает кабельные системы в разных ценовых диапазонах
+              %a.title-link.link{:href => "#"} посмотреть
+          .col-xs-9.col-sm-9.col-md-8.col-lg-8
+            .insp-thumb-wrap
+              %img{:alt => "Image 1", :src => "/images/tab4.jpg", :title => "Image 1"}
+/ END Main container

@@ -1,0 +1,59 @@
+%body
+  / START Main container
+  %main
+    / START Header Page
+    .page-header.center
+      .container
+        .row
+          .col-xs-12.col-sm-12.col-md-12.col-lg-12.page-img-wrap
+            .page-img.video{:style => "background-image: url('images/video2.jpg')"}
+              %a.playbutton{:href => "https://vimeo.com/109585712"}
+          .col-xs-12.col-sm-6.col-md-6.col-lg-6.page-title-wrap
+            %a.page-title.row{:href => "#"}
+              %span.title-preview немного о нас
+              %h1
+                Электрооборудование для офисных и жилых помещений
+              %span.title-link.link{:href => "#"} Заказать звонок
+    / END Header Page
+    .container
+      .row
+        .col-xs-12.col-sm-12.col-md-12.col-lg-12.bread-crumbs
+          =link_to "главная", root_path
+          %span.separator /
+          о нас
+    .container
+      .row.inspiration-item
+        .col-xs-12.col-sm-7.col-md-6.col-lg-6.item-desc
+          .description-wrap
+            %span.title-preview гибкое и простое решение
+            %h2
+              Решения от Kantu радуют
+              %br/
+              потребителей с 1999 года
+            %p С 1999 г компания Kantu занимается проктированием и снабежнием электрических систем для офисных и жилых помещений. На складе 4 000 м2 в наличии решения от эконом класса до премиальных марок как Unica, Merten, Schneider Electric и даже специализированных как Salvador. От простого стиля до премиального и ретро
+            =link_to "посмотреть каталог", katalogs_path, class: "btn-how"
+        .col-xs-12.col-sm-5.col-md-6.col-lg-6.item-thumb
+          %img{:alt => "О нас", :src => "/images/about.jpg", :title => "О нас"}/
+    / START Inspiration Block
+    .map
+      .container
+        .row.map-row
+          .col-xs-12.col-sm-12.col-md-12.col-lg-12.map-wrap
+            %h6.insp-meta
+              %span наши координаты
+              \/ как добраться?
+            .page-img
+              #map
+          .col-xs-12.col-sm-5.col-md-5.col-lg-5.insp-title-wrap
+            .insp-title.row
+              %span.title-preview мы находимся
+              %h2
+                Наш офис:
+                %br/
+                Манежная пл., 1с2, Москва, 125009
+                %br/
+                Наш склад:
+                %br/
+                1-я Магистральная ул., 13, Москва, 123007
+    / END Inspiration Block
+  / END Main container

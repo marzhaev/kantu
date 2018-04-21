@@ -1,0 +1,67 @@
+//********************* Hero section *********************
+
+.hero-content__overlay {
+  overflow: hidden;
+}
+
+.offer-wrapper_fullwidth {
+  width: 616px;
+  right: 50%;
+  margin-right: -308px;
+}
+
+.about {
+  margin-top: 130px;
+}
+
+.offer-wrapper__title_about {
+  width: 360px;
+  margin-bottom: 35px;
+}
+
+.offer-wrapper__desc {
+  max-width: 458px;
+  margin-bottom: 35px;
+}
+
+.button_contour {
+  width: 266px;
+  height: 68px;
+  border: 2px solid $color-accent;
+  line-height: 52px;
+  vertical-align: middle;
+  background-color: #fff;
+  transition: all 0.4s;
+
+  &:hover {
+    background-color: $color-hover;
+    color: #fff;
+    border: 2px solid $color-hover;
+  }
+}
+
+.about-content__image {
+  width: 100%;
+  height: auto;
+}
+
+#about-content {
+  margin-bottom: 30px;
+}
+
+
+
+//********************* Map *********************
+
+.about-tooltip {
+  left: -100px;
+  margin-top: -20px;
+}
+
+#about-map {
+  margin-bottom: 100px;
+}
+
+.sub-offer__title {
+  margin-bottom: 50px;
+}

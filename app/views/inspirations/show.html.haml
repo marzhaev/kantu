@@ -1,0 +1,217 @@
+/ START Main container
+%main
+  / START Header Page
+  .page-header.center
+    .container
+      .row
+        .col-xs-12.col-sm-12.col-md-12.col-lg-12.page-img-wrap
+          .page-img.video{:style => "background-image: url('/images/video.jpg')"}
+            %a.playbutton{"data-video" => "https://01-lvl3-pdl.vimeocdn.com/01/1917/4/109585712/299389083.mp4?expires=1514470276&token=069943bc5169c6fb21370", :href => "https://vimeo.com/109585712"}
+        .col-xs-12.col-sm-6.col-md-6.col-lg-6.page-title-wrap
+          %a.page-title.row{:href => "#"}
+            %span.title-preview для коммерческих помещений
+            %h1 Вариант установки кабельных систем
+            %span.title-link.link{:href => "#"} Заказать звонок
+  / END Header Page
+  .container
+    .row
+      .col-xs-12.col-sm-12.col-md-12.col-lg-12.bread-crumbs
+        %a{:href => "#"} каталог
+        %span.separator /
+        %a{:href => ""} для коммерческих помещений
+        = succeed "\u{43f}\u{440}\u{438}\u{43c}\u{435}\u{440}\u{44b}" do
+          %span.separator /
+  .container
+    .row.inspiration-item
+      .col-xs-12.col-sm-7.col-md-6.col-lg-6.item-desc
+        .description-wrap
+          %span.title-preview гибкое и простое решение
+          %h2
+            Кабельные системы
+            %br/
+            от Kantu
+          %p Итак, являетесь ли вы спецификатором, установщиком, владельцем здания или арендатором, вы выиграете от выдающейся инфраструктуры установки OptiLine 50. Наслаждайтесь всеми преимуществами, от технологии «без нструмента» до широких возможностей установки, предоставление легко доступной мощности и данных для пользователей
+          %a.btn-how{:href => "#"} посмотреть каталог
+      .col-xs-12.col-sm-5.col-md-6.col-lg-6.item-thumb
+        %img{:alt => "Inspiration Item", :src => "/images/tab4.jpg"}/
+  / START Filter
+  .container
+    .row.product-wrap
+      .col-xs-12.col-sm-12.col-md-12.col-lg-12
+        .product.row
+          .col-xs-6.col-sm-6.col-md-3.col-lg-3.product-item-wrap
+            .product-item.clearfix{:href => "#"}
+              .item-img
+                %img{:alt => "Product 1", :src => "/products/cat-prod-1.jpg"}/
+              %h2 GSL000431
+              %h5.item-desk-title тип:
+              %span.desc-txt выключатель
+              %h5.item-desk-title производитель:
+              %span.desc-txt schneider electric
+              %h5.item-desk-title серия:
+              %span.desc-txt glossa
+              %h5.item-desk-title номинальный ток:
+              %span.desc-txt 10A
+              %h5.item-desk-title цвет:
+              %span.desc-txt белый
+              %h5.item-desk-title наличие на складе:
+              %span.desc-txt в наличии
+              %a.btn-download
+                Скачать каталог
+                %svg#download{:height => "50", :viewbox => "0 0 50 50", :width => "50", :xmlns => "http://www.w3.org/2000/svg"}
+                  %polyline.a{:points => "42 9 25 27 24 27 6 9"}
+                  %line.a{:x1 => "7", :x2 => "25", :y1 => "37", :y2 => "37"}
+                  %line.a{:x1 => "42", :x2 => "35", :y1 => "37", :y2 => "37"}
+          .col-xs-6.col-sm-6.col-md-3.col-lg-3.product-item-wrap
+            .product-item.clearfix{:href => "#"}
+              .item-img
+                %img{:alt => "Product 2", :src => "/products/cat-prod-2.jpg"}/
+              %h2 GSL000431
+              %h5.item-desk-title тип:
+              %span.desc-txt выключатель
+              %h5.item-desk-title производитель:
+              %span.desc-txt schneider electric
+              %h5.item-desk-title серия:
+              %span.desc-txt glossa
+              %h5.item-desk-title номинальный ток:
+              %span.desc-txt 10A
+              %h5.item-desk-title цвет:
+              %span.desc-txt белый
+              %h5.item-desk-title наличие на складе:
+              %span.desc-txt в наличии
+              %a.btn-download
+                Скачать каталог
+                %svg#download{:height => "50", :viewbox => "0 0 50 50", :width => "50", :xmlns => "http://www.w3.org/2000/svg"}
+                  %polyline.a{:points => "42 9 25 27 24 27 6 9"}
+                  %line.a{:x1 => "7", :x2 => "25", :y1 => "37", :y2 => "37"}
+                  %line.a{:x1 => "42", :x2 => "35", :y1 => "37", :y2 => "37"}
+          .col-xs-6.col-sm-6.col-md-3.col-lg-3.product-item-wrap
+            .product-item.clearfix{:href => "#"}
+              .item-img
+                %img{:alt => "Product 3", :src => "/products/cat-prod-3.jpg"}/
+              %h2 GSL000431
+              %h5.item-desk-title тип:
+              %span.desc-txt выключатель
+              %h5.item-desk-title производитель:
+              %span.desc-txt schneider electric
+              %h5.item-desk-title серия:
+              %span.desc-txt glossa
+              %h5.item-desk-title номинальный ток:
+              %span.desc-txt 10A
+              %h5.item-desk-title цвет:
+              %span.desc-txt белый
+              %h5.item-desk-title наличие на складе:
+              %span.desc-txt в наличии
+              %a.btn-download
+                Скачать каталог
+                %svg#download{:height => "50", :viewbox => "0 0 50 50", :width => "50", :xmlns => "http://www.w3.org/2000/svg"}
+                  %polyline.a{:points => "42 9 25 27 24 27 6 9"}
+                  %line.a{:x1 => "7", :x2 => "25", :y1 => "37", :y2 => "37"}
+                  %line.a{:x1 => "42", :x2 => "35", :y1 => "37", :y2 => "37"}
+          .col-xs-6.col-sm-6.col-md-3.col-lg-3.product-item-wrap
+            .product-item.clearfix{:href => "#"}
+              .item-img
+                %img{:alt => "Product 3", :src => "/products/cat-prod-3.jpg"}/
+              %h2 GSL000431
+              %h5.item-desk-title тип:
+              %span.desc-txt выключатель
+              %h5.item-desk-title производитель:
+              %span.desc-txt schneider electric
+              %h5.item-desk-title серия:
+              %span.desc-txt glossa
+              %h5.item-desk-title номинальный ток:
+              %span.desc-txt 10A
+              %h5.item-desk-title цвет:
+              %span.desc-txt белый
+              %h5.item-desk-title наличие на складе:
+              %span.desc-txt в наличии
+              %a.btn-download
+                Скачать каталог
+                %svg#download{:height => "50", :viewbox => "0 0 50 50", :width => "50", :xmlns => "http://www.w3.org/2000/svg"}
+                  %polyline.a{:points => "42 9 25 27 24 27 6 9"}
+                  %line.a{:x1 => "7", :x2 => "25", :y1 => "37", :y2 => "37"}
+                  %line.a{:x1 => "42", :x2 => "35", :y1 => "37", :y2 => "37"}
+        .row
+          %a.btn-more
+            %svg#load-more{:height => "20", :viewbox => "0 0 50 20", :width => "50", :xmlns => "http://www.w3.org/2000/svg"}
+              %circle.a{:cx => "7.5", :cy => "10", :r => "6.5"}
+              %circle.a{:cx => "25.5", :cy => "10", :r => "6.5"}
+              %circle.b{:cx => "42.5", :cy => "10", :r => "6.5"}
+            посмотреть все кабельные системы
+        %a.btn-how.mobile{:href => "#"} как купить?
+  / END Filter
+  / START Inspiration Block
+  .inspiration
+    .container
+      .row
+        .col-xs-12.col-sm-12.col-md-12.col-lg-12.inspiration-wrap
+          %h6.insp-meta
+            %span канту 2017
+            \/ решение для офиса
+          .page-img
+            %img{:alt => "Inspiration", :src => "/images/insp.jpg"}/
+        .col-xs-12.col-sm-5.col-md-5.col-lg-5.insp-title-wrap
+          .insp-title.row
+            %span.title-preview решение любой задачи
+            %h2 Компания Kantu предлагает комфортные и безопасные решения для Вашего дома
+            %a.title-link.link{:href => "#"} вдохновиться
+  / END Inspiration Block
+  / START Filter
+  .container
+    .row.series-wrap
+      .col-xs-12.col-sm-12.col-md-12.col-lg-12
+        .filter
+          %button.series-btn
+            %svg#filter-svg{:height => "50", :viewbox => "0 0 50 50", :width => "50", :xmlns => "http://www.w3.org/2000/svg"}
+              %line.a{:x1 => "28", :x2 => "50", :y1 => "11", :y2 => "11"}
+              %line.b{:x2 => "31", :y1 => "25", :y2 => "25"}
+              %line.b{:x2 => "5", :y1 => "39", :y2 => "39"}
+              %line.b{:x1 => "20", :x2 => "33", :y1 => "39", :y2 => "39"}
+              %circle.b{:cx => "20.5", :cy => "10.5", :r => "7.5"}
+              %circle.b{:cx => "37.5", :cy => "24.5", :r => "7.5"}
+              %line.b{:x1 => "45", :x2 => "50", :y1 => "25", :y2 => "25"}
+              %line.a{:x2 => "14", :y1 => "11", :y2 => "11"}
+              %circle.b{:cx => "12.5", :cy => "39.5", :r => "7.5"}
+              %line.b{:x1 => "43", :x2 => "50", :y1 => "39", :y2 => "39"}
+          %ul.nav.filter-items
+            %li
+              %a.filter-btn{:href => "#"} розетки
+            %li
+              %a.filter-btn{:href => "#"} выключатели
+            %li
+              %a.filter-btn{:href => "#"} управление комфортом
+            %li
+              %a.filter-btn{:href => "#"} квартирные щиты
+      .col-xs-12.col-sm-12.col-md-12.col-lg-12
+        .series.row
+          .col-xs-4.col-sm-4.col-md-4.col-lg-4.series-item-wrap
+            .series-item.clearfix{:href => "#"}
+              .item-img
+                %img{:alt => "Product 1", :src => "/products/product-item-1.jpg"}/
+              %h2 Выключатели серия Unica
+              %p Cерия Unica Хамелеон – это самая широкая цветовая палитра рамок на рынке электротехники. В коллекции представлено 20 цветов: от нежных пастельных тонов до ярких модернистских.
+              %span.title-link.link посмотреть серию
+          .col-xs-4.col-sm-4.col-md-4.col-lg-4.series-item-wrap
+            .series-item.clearfix{:href => "#"}
+              .item-img
+                %img{:alt => "Product 2", :src => "/products/product-item-2.jpg"}/
+              %h2 Выключатели серия Glossa
+              %p Дизайн серии Glossa разрабатывался французским дизайн-бюро и отражает современные тенденции европейского дизайна: плавные линии, классические формы и универсальность.
+              %span.title-link.link посмотреть серию
+          .col-xs-4.col-sm-4.col-md-4.col-lg-4.series-item-wrap
+            .series-item.clearfix{:href => "#"}
+              .item-img
+                %img{:alt => "Product 3", :src => "/products/product-item-3.jpg"}/
+              %h2 Выключатели серия Merten
+              %p
+                Серия Antique представлена изделиями роскошного  дизайна для классического интерьера из высококачественных материалов, таких как дорогая и эксклюзивная  латунь с позолотой 24 карата, а также из пластика с сохранением того же уникального стиля.
+              %span.title-link.link посмотреть серию
+          .col-xs-4.col-sm-4.col-md-4.col-lg-4.series-item-wrap
+            .series-item.clearfix{:href => "#"}
+              .item-img
+                %img{:alt => "Product 2", :src => "/products/product-item-2.jpg"}/
+              %h2 Выключатели серия Glossa
+              %p Дизайн серии Glossa разрабатывался французским дизайн-бюро и отражает современные тенденции европейского дизайна: плавные линии, классические формы и универсальность.
+              %span.title-link.link посмотреть серию
+  / END Filter
+/ END Main container
