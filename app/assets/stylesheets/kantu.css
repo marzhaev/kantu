@@ -8135,7 +8135,7 @@ h3.cat-name,
       .filter-items li a:hover, .filter-items li .filter-btn:hover {
         background: transparent;
         color: #2a0d02;
-        font-weight: 700;
+        font-weight: 400;
         letter-spacing: 2px;
         border-bottom: 2px solid #d65828; }
       .filter-items li a.active, .filter-items li .filter-btn.active {
