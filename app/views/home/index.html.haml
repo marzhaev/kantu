@@ -57,7 +57,7 @@
       .row
         .col-xs-12.col-sm-12.col-md-12.col-lg-12
           %ul.nav.nav-tabs
-            %li{"data-filter" => "all"}
+            %li{"data-filter" => ".favourites"}
               %a.tablink{:href => "#"}
                 %img.tabs-icon{:alt => "Популярные", :src => "icons/tabs11.png"}
                 Популярные
@@ -76,27 +76,50 @@
       / Tab panes
       .tab-content
         .row
-          .col-xs-6.col-sm-6.col-md-3.col-lg-3
-            .tab-img.mix.home
+          .col-xs-6.col-sm-6.col-md-3.col-lg-3.mix.home
+            .tab-img{"data-target" => "#tab-modal", "data-toggle" => "modal"}
               %img{:alt => "Some Image", :src => "images/tab1.jpg"}/
-          .col-xs-6.col-sm-6.col-md-3.col-lg-3
-            .tab-img.mix.home
+          .col-xs-6.col-sm-6.col-md-3.col-lg-3.mix.home
+            .tab-img{"data-target" => "#tab-modal", "data-toggle" => "modal"}
               %img{:alt => "Some Image", :src => "images/tab2.jpg"}/
-          .col-xs-12.col-sm-12.col-md-6.col-lg-6
-            .tab-img.mix.home
+          .col-xs-12.col-sm-12.col-md-6.col-lg-6.mix.home
+            .tab-img{"data-target" => "#tab-modal", "data-toggle" => "modal"}
               %img{:alt => "Some Image", :src => "images/tab3.jpg"}/
-          .col-xs-12.col-sm-12.col-md-6.col-lg-6
-            .tab-img.mix.office
+          .col-xs-12.col-sm-12.col-md-6.col-lg-6.mix.office
+            .tab-img{"data-target" => "#tab-modal", "data-toggle" => "modal"}
               %img{:alt => "Some Image", :src => "images/tab4.jpg"}/
-          .col-xs-6.col-sm-6.col-md-3.col-lg-3
-            .tab-img.mix.office
+          .col-xs-6.col-sm-6.col-md-3.col-lg-3.mix.office
+            .tab-img{"data-target" => "#tab-modal", "data-toggle" => "modal"}
               %img{:alt => "Some Image", :src => "images/tab1.jpg"}/
-          .col-xs-6.col-sm-6.col-md-3.col-lg-3
-            .tab-img.mix.accessory
+          .col-xs-6.col-sm-6.col-md-3.col-lg-3.mix.accessory
+            .tab-img{"data-target" => "#tab-modal", "data-toggle" => "modal"}
               %img{:alt => "Some Image", :src => "images/tab2.jpg"}/
-          .col-xs-6.col-sm-6.col-md-3.col-lg-3
-            .tab-img.mix.accessory
-              %img{:alt => "Some Image", :src => "images/tab1.jpg"}/              
+          .col-xs-6.col-sm-6.col-md-3.col-lg-3.mix.accessory
+            .tab-img{"data-target" => "#tab-modal", "data-toggle" => "modal"}
+              %img{:alt => "Some Image", :src => "images/tab1.jpg"}/
+          .col-xs-12.col-sm-12.col-md-6.col-lg-6.mix.favourites
+            .tab-img{"data-target" => "#tab-modal", "data-toggle" => "modal"}
+              %img{:alt => "Some Image", :src => "images/tab3.jpg"}/
+          .col-xs-6.col-sm-6.col-md-3.col-lg-3.mix.favourites
+            .tab-img{"data-target" => "#tab-modal", "data-toggle" => "modal"}
+              %img{:alt => "Some Image", :src => "images/tab1.jpg"}/
+      / Modals
+      .tab-modals
+        .row
+          .col-md-12
+            #tab-modal.modal.fade
+              .modal-dialog
+                .modal-content
+                  .modal-body
+                    .modal-body-img
+                      %img{:alt => "Some Image", :src => "images/tab1.jpg"}/
+                    .modal-body-desc
+                      .modal-body-content
+                        %h4#exampleModalLabel.modal-title Выключатели
+                        %p Cерия Unica Хамелеон – это самая широкая цветовая палитра рамок на рынке   электротехники. В коллекции представлено 20 цветов: от нежных пастельных тонов до   ярких модернистских.
+                      .btn-modal-wrapper
+                        %span.title-link.link Посмотреть
+                        %span.link.link-close{"data-dismiss" => "modal", :type => "button"} Закрыть
   / END Tab Filter
   / START Form
   !!! XML
