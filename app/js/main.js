@@ -97,5 +97,5 @@ $(document).ready(function() {
     menu.removeClass("main-navigation_active");
   });
 
-  var mixer = mixitup('.examples-gallery-container');
+  var mixer = mixitup('.tab-content');
 });

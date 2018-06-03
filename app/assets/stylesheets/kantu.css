@@ -6641,7 +6641,7 @@ main {
 /* Forms */
 .page-form {
   text-align: center;
-  margin-top: 100px; }
+  margin-top: 65px; }
   .page-form .title-preview {
     display: inline-block; }
 
@@ -7992,8 +7992,9 @@ h3.cat-name,
       .nav-filter li a:hover,
       .nav-filter li a:focus {
         border: 2px solid #fff;
-        font-weight: 700;
-        background: #fff;
+        font-weight: 400;
+        background: #eee;
+        border: 1px solid #eee;
         -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
     .nav-tabs li.active a,
@@ -8134,7 +8135,7 @@ h3.cat-name,
       .filter-items li a:hover, .filter-items li .filter-btn:hover {
         background: transparent;
         color: #2a0d02;
-        font-weight: 700;
+        font-weight: 400;
         letter-spacing: 2px;
         border-bottom: 2px solid #d65828; }
       .filter-items li a.active, .filter-items li .filter-btn.active {
@@ -8435,7 +8436,8 @@ h5.item-desk-title,
     text-transform: inherit; }
 
 .insp-title {
-  margin-top: -65%; }
+  margin-top: -65%;
+cursor: pointer;}
 
 .inspiration-item {
   display: -webkit-box;
@@ -8693,7 +8695,7 @@ h5.item-desk-title,
     position: relative;
     margin-top: 70px; }
   .navbar {
-    height: 100%; }
+    height: 100%;}
   .navbar-collapse.in {
     left: 0;
     top: 70px; }
@@ -9187,3 +9189,64 @@ h5.item-desk-title,
   .product-item h2 {
     font-size: 22px;
     line-height: 30px; } }
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: white;
+  max-width: 80px;
+}
+.tab-img {
+  cursor: pointer;
+}
+
+.modal-body p {
+  text-transform: none;
+  color: #2a0d02 !important;
+  text-align: left;
+}
+
+.modal.in .modal-dialog .modal-content h4 {
+  text-align: left;
+  margin-bottom: 10px;
+  color: #2a0d02;
+}
+
+.modal-body {
+  padding: 0;
+}
+
+.col-md-6 {
+  padding-left: 0;
+}
+
+.modal-body {
+  display: flex;
+}
+
+.modal-body-img img {
+  width: 300px;
+  height: auto;
+}
+
+.modal-body-desc {
+  display: flex;
+  flex-direction: column;
+
+  padding-left: 25px;
+  padding-right: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.btn-modal-wrapper {
+  margin-top: auto;
+}
+
+.modal-body-content {
+  flex-grow: 1;
+}
+
+.link-close {
+  color: #2a0d02 !important;
+}
