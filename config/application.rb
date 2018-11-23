@@ -15,7 +15,7 @@ module Kantu
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
     @mongodb_client = Mongo::Client.new(
-      'mongodb+srv://texenergo_ro:1HqJn9MKSIsWLKVc@cluster0-ddup8.mongodb.net/production_v3',
+      'mongodb+srv://texenergo_ro:YrBZnF6HH6tUj4Qx@texenergocom-7sh08.mongodb.net/production_v3?retryWrites=true',
       app_name: "kantu-#{Rails.env}"
     )
   end

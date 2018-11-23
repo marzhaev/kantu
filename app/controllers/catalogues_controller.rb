@@ -6,10 +6,10 @@ class CataloguesController < ApplicationController
   def show
     voltage_selector
     flipping_selector
-    
+
     case
     when Manufacturer.name_to_id(params[:manufacturer]) then
-      product_ids = product_properties_db.find(default_selector).distinct(:product_id)
+      product_ids = products_db.find({"functor_data.type" => "Relay"}).distinct(:product_id)
       @products = products_db.find({
         _id: {"$in" => product_ids},
         manufacturer_id: Manufacturer.name_to_id(params[:manufacturer])
@@ -20,8 +20,8 @@ class CataloguesController < ApplicationController
         }
       }).limit(6).to_a
     else
-      @properties = product_properties_db.find(default_selector).limit(6).to_a
-      @products = Product.find_many( @properties.collect{ |x| x[:product_id] })
+      @properties = products_db.find({"functor_data.type" => "Mcb"}).limit(6).to_a
+      @products = products_db.find({"functor_data.type" => "Mcb"}).limit(6).map{|h| Product.new(h)}
     end
   end
 
